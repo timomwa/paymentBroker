@@ -17,6 +17,28 @@
 		<url-pattern>/testWS</url-pattern>
 	</servlet-mapping>
 	
+	
+	
+	<servlet>
+		<display-name>invoiceService</display-name>
+		<servlet-name>invoiceService</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>invoiceService</servlet-name>
+		<url-pattern>/invoiceService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>paymentService</display-name>
+		<servlet-name>paymentService</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>paymentService</servlet-name>
+		<url-pattern>/paymentService</url-pattern>
+	</servlet-mapping>
+	
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>

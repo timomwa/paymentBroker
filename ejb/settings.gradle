@@ -1,0 +1,3 @@
+gradle.ext.theName = 'paymentbroker-ejb'
+gradle.ext.theGroup = 'paymentbroker'
+gradle.ext.theVersion = 1.0

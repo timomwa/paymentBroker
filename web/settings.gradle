@@ -1,0 +1,3 @@
+gradle.ext.theName = 'paymentbroker-war'
+gradle.ext.theVersion = 1.0
+gradle.ext.theGroup = 'paymentbroker'

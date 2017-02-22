@@ -1,16 +1,26 @@
+apply plugin: 'war'
+apply plugin: 'ear'
+apply plugin: 'java'
+apply plugin: 'maven'
+	    
 allprojects {
-    apply plugin: 'java'
-    apply plugin: 'maven'
-    sourceCompatibility = 1.6
+	sourceCompatibility = 1.6
     targetCompatibility = 1.6
     compileJava.options.fork = true
 	compileJava.options.forkOptions.executable = gradle.javacPath
 	
-	
 	archivesBaseName = gradle.theName
 	group = gradle.theGroup
-
-	
+	version = gradle.theVersion
+	/*jar {
+		baseName = 'paymentbroker-ejb'
+		version = gradle.theVersion
+	}
+	war {
+		baseName = 'paymentbroker-war'
+		version = gradle.theVersion
+	}
+	*/
 	repositories {
 	    mavenCentral()	
 	    maven {
@@ -33,6 +43,34 @@ allprojects {
 		//compile group: 'org.hibernate', name: 'hibernate-annotations', version: '3.5.6-Final'
 	}
 	
-	configurations {
-	}
 }
+
+//archivesBaseName = gradle.theName
+//group = gradle.theGroup
+
+dependencies {
+	earlib group: 'com.sun.xml.ws', name: 'jaxws-rt', version: '2.1.4'
+	deploy project(':ejb')
+    deploy project(path:':web', configuration:'archives')
+}
+
+ear{
+	libDirName 'APP-INF/lib'
+	deploymentDescriptor {
+		//fileName = "application.xml"  
+	    version = "5"  
+	    //applicationName = "paymentbroker"
+	    //initializeInOrder = true
+	    //displayName = gradle.theName
+	    //description = "NDA payment broker "
+	    //securityRole "admin"
+        //securityRole "Admin123#@!"
+	    module("paymentbroker-ejb-1.0.jar", "java")  
+	    webModule("paymentbroker-war-1.0.war", "/broker") 
+    }
+}
+
+
+
+
+

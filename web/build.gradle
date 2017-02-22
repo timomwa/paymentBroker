@@ -1,5 +1,19 @@
 apply plugin: 'war'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+group = gradle.theGroup
+version = gradle.theVersion
 war {
-	baseName = gradle.theName
+	baseName = 'paymentbroker-war'
 	version = gradle.theVersion
+}
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+dependencies {
+	providedCompile 'paymentbroker:paymentbroker-ejb:1.0'
 }

@@ -1,12 +1,17 @@
 apply plugin: 'ear'
+apply plugin: 'java'
+apply plugin: 'maven'
+    
 archivesBaseName = gradle.theName
+
 group = gradle.theGroup
+version = gradle.theVersion
+
 
 //task copyToLib(type: Copy) {
 //   into "$buildDir/output/libs"
 //    from configurations.runtime
 //}
-
 dependencies {
 	earlib group: 'com.sun.xml.ws', name: 'jaxws-rt', version: '2.1.4'
 	deploy project(':ejb')

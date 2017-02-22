@@ -1,8 +1,7 @@
-include ':ejb',':web', ':ear'
+include ':ejb',':web'
 //Edit this to point to where your javac is.
 gradle.ext.javacPath = '/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/bin/javac'
 
-gradle.ext.theName = 'paymentbroker'
-rootProject.name = 'paymentbroker'
+gradle.ext.theName = 'paymentbroker-ear'
 gradle.ext.theGroup = 'paymentbroker'
 gradle.ext.theVersion = 1.0
