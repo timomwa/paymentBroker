@@ -1,4 +1,4 @@
-package ke.co.technovation.dto;
+package ug.or.nda.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -6,7 +6,7 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name="invoice", namespace="http://service.technovation.co.ke")
+@XmlType(name="invoice", namespace="http://service.nda.or.ug")
 public class Invoice implements Serializable {
 
 	/**

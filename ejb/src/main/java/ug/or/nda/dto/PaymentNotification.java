@@ -1,11 +1,11 @@
-package ke.co.technovation.dto;
+package ug.or.nda.dto;
 
 import java.io.Serializable;
 import java.util.Date;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name="paymentNotification", namespace="http://service.technovation.co.ke")
+@XmlType(name="paymentNotification", namespace="http://service.nda.or.ug")
 public class PaymentNotification implements Serializable {
 
 	/**

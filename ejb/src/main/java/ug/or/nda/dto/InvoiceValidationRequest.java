@@ -1,10 +1,10 @@
-package ke.co.technovation.dto;
+package ug.or.nda.dto;
 
 import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name="invoiceValidationRequest", namespace="http://service.technovation.co.ke")
+@XmlType(name="invoiceValidationRequest", namespace="http://service.nda.or.ug")
 public class InvoiceValidationRequest implements Serializable {
 
 	/**

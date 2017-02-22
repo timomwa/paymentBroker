@@ -1,10 +1,10 @@
-package ke.co.technovation.dto;
+package ug.or.nda.dto;
 
 import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name="invoiceValidationResponse", namespace="http://service.technovation.co.ke")
+@XmlType(name="invoiceValidationResponse", namespace="http://service.nda.or.ug")
 public class InvoiceValidationResponse implements Serializable {
 
 	private static final long serialVersionUID = -8582351670605528433L;

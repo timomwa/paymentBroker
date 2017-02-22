@@ -1,4 +1,4 @@
-package ke.co.technovation.service;
+package ug.or.nda.dto;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

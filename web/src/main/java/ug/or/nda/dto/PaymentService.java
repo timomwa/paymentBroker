@@ -1,4 +1,4 @@
-package ke.co.technovation.service;
+package ug.or.nda.dto;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -6,7 +6,7 @@ import javax.jws.WebService;
 import ke.co.technovation.dto.PaymentNotificationRequest;
 import ke.co.technovation.dto.PaymentNotificationResponse;
 
-@WebService(name="paymentService" , targetNamespace="http://services.technovation.co.ke")
+@WebService(name="paymentService" , targetNamespace="http://services.nda.or.ug")
 public class PaymentService {
 	
 	@WebMethod
