@@ -1,0 +1,5 @@
+apply plugin: 'war'
+war {
+	baseName = gradle.theName
+	version = gradle.theVersion
+}

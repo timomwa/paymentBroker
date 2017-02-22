@@ -1,1 +1,5 @@
 # paymentBroker
+
+Prerequisites
+
+``gradle ear``

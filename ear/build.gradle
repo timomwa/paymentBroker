@@ -1,0 +1,30 @@
+apply plugin: 'ear'
+archivesBaseName = gradle.theName
+group = gradle.theGroup
+
+//task copyToLib(type: Copy) {
+//   into "$buildDir/output/libs"
+//    from configurations.runtime
+//}
+
+dependencies {
+	earlib group: 'com.sun.xml.ws', name: 'jaxws-rt', version: '2.1.4'
+	deploy project(':ejb')
+    deploy project(path:':web', configuration:'archives')
+}
+
+ear{
+	libDirName 'APP-INF/lib'
+	deploymentDescriptor {
+		//fileName = "application.xml"  
+	    version = "5"  
+	    //applicationName = "paymentbroker"
+	    //initializeInOrder = true
+	    //displayName = gradle.theName
+	    //description = "NDA payment broker "
+	    //securityRole "admin"
+        //securityRole "Admin123#@!"
+	    module("paymentbroker-1.0.jar", "java")  
+	    webModule("paymentbroker-1.0.war", "/broker") 
+    }
+}

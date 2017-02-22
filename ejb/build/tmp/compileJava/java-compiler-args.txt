@@ -1,0 +1,16 @@
+-source
+1.6
+-target
+1.6
+-d
+/Users/timothymwangi/git/paymentBroker/ejb/build/classes/main
+-g
+-sourcepath
+""
+-proc:none
+-XDuseUnsharedTable=true
+-classpath
+""
+-Xlint:unchecked
+-Xlint:deprecation
+/Users/timothymwangi/git/paymentBroker/ejb/src/main/java/web/TestWS.java

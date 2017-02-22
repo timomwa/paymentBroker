@@ -1,0 +1,38 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    sourceCompatibility = 1.6
+    targetCompatibility = 1.6
+    compileJava.options.fork = true
+	compileJava.options.forkOptions.executable = gradle.javacPath
+	
+	
+	archivesBaseName = gradle.theName
+	group = gradle.theGroup
+
+	
+	repositories {
+	    mavenCentral()	
+	    maven {
+			url "http://repository.primefaces.org"
+		}
+	}
+	
+	gradle.projectsEvaluated {
+   		tasks.withType(JavaCompile) {
+       		options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    	}
+	}
+	
+	dependencies {
+		//compile group: 'javax', name: 'javaee-api', version: '7.0'
+		//compile group: 'log4j', name: 'log4j', version: '1.2.17'
+		//compile group: 'org.hibernate', name: 'hibernate-core', version: '5.0.0.Final'
+		//compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.0.0.Final'
+		//compile group: 'org.hibernate', name: 'hibernate-infinispan', version: '5.0.0.Final'
+		//compile group: 'org.hibernate', name: 'hibernate-annotations', version: '3.5.6-Final'
+	}
+	
+	configurations {
+	}
+}
