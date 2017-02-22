@@ -3,8 +3,9 @@ package ug.or.nda.dto;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
-import ke.co.technovation.dto.InvoiceValidationRequest;
-import ke.co.technovation.dto.InvoiceValidationResponse;
+
+import ug.or.nda.dto.InvoiceValidationResponse;
+import ug.or.nda.dto.InvoiceValidationRequest;
 
 @WebService(name="invoiceservice" , targetNamespace="http://services.nda.or.ug")
 public class InvoiceService {
