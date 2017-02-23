@@ -10,9 +10,9 @@ import org.quartz.JobExecutionException;
 
 import org.jboss.ejb3.annotation.ResourceAdapter;
 
-@MessageDriven(activationConfig =
-{@ActivationConfigProperty(propertyName = "cronTrigger", propertyValue = "*/5 * * * * ?")})
-@ResourceAdapter("quartz-ra.rar") 
+//@MessageDriven(activationConfig =
+//{@ActivationConfigProperty(propertyName = "cronTrigger", propertyValue = "*/5 * * * * ?")})
+//@ResourceAdapter("quartz-ra.rar") 
 public class PaymentForwardJob  implements Job {
 	
 	private Logger logger = Logger.getLogger(getClass());
