@@ -7,9 +7,9 @@ import javax.jws.WebService;
 
 import org.apache.log4j.Logger;
 
-import ug.or.nda.dto.InvoiceValidationResponse;
+import ug.or.nda.dto.InvoiceValidationResponseDTO;
 import ug.or.nda.ejb.InvoiceServiceEJBI;
-import ug.or.nda.dto.InvoiceValidationRequest;
+import ug.or.nda.dto.InvoiceValidationRequestDTO;
 
 @WebService(name="invoiceservice" , targetNamespace="http://services.nda.or.ug")
 @Stateless
@@ -21,11 +21,11 @@ public class InvoiceService {
 	private InvoiceServiceEJBI invoiceService;
 	
 	@WebMethod
-	public InvoiceValidationResponse  validateInvoice(InvoiceValidationRequest invoiceValidationReq){
+	public InvoiceValidationResponseDTO  validateInvoice(InvoiceValidationRequestDTO invoiceValidationReq){
 		
 		logger.info(invoiceValidationReq);
 		
-		InvoiceValidationResponse response = null;
+		InvoiceValidationResponseDTO response = null;
 		
 		try{
 		

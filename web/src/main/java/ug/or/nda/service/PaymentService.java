@@ -7,9 +7,9 @@ import javax.jws.WebService;
 
 import org.apache.log4j.Logger;
 
-import ug.or.nda.dto.PaymentNotificationResponse;
+import ug.or.nda.dto.PaymentNotificationResponseDTO;
 import ug.or.nda.ejb.PaymentNotificationEJBI;
-import ug.or.nda.dto.PaymentNotificationRequest;
+import ug.or.nda.dto.PaymentNotificationRequestDTO;
 
 @WebService(name="paymentService" , targetNamespace="http://services.nda.or.ug")
 @Stateless
@@ -21,11 +21,11 @@ public class PaymentService {
 	private Logger logger = Logger.getLogger(getClass());
 	
 	@WebMethod
-	public PaymentNotificationResponse paymentNotification(PaymentNotificationRequest paymentNotificationReq){
+	public PaymentNotificationResponseDTO paymentNotification(PaymentNotificationRequestDTO paymentNotificationReq){
 		
 		logger.info(paymentNotificationReq);
 		
-		PaymentNotificationResponse resp = null;
+		PaymentNotificationResponseDTO resp = null;
 		
 		try{
 		

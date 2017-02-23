@@ -1,2 +1,13 @@
 <jboss-app>
+	<!--ejb-ref>
+		<ejb-ref-name>ejb/WorkflowService</ejb-ref-name>
+		<jndi-name>org.eclipse.stardust.engine.api.runtime.WorkflowService
+		</jndi-name>
+	</ejb-ref>
+
+	<ejb-local-ref>
+		<ejb-ref-name>ejb/LocalWorkflowService</ejb-ref-name>
+		<local-jndi-name>org.eclipse.stardust.engine.api.runtime.LocalWorkflowService
+		</local-jndi-name>
+	</ejb-local-ref-->
 </jboss-app>

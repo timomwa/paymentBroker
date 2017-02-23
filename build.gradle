@@ -17,6 +17,9 @@ allprojects {
 	    maven {
 			url "http://repository.primefaces.org"
 		}
+		maven {
+			url "https://repository.jboss.org/nexus/content/repositories/releases/"
+		}
 	}
 	
 	gradle.projectsEvaluated {
@@ -28,10 +31,13 @@ allprojects {
 }
 
 dependencies {
+	compile group: 'org.jboss.ejb3', name: 'jboss-ejb3-ext-api', version: '2.1.0'
+	compile group: 'org.quartz-scheduler', name: 'quartz-jobs', version: '2.2.1'
+	compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.1'
 	earlib group: 'org.jasypt', name: 'jasypt-hibernate4', version: '1.9.0'
 	earlib group: 'commons-codec', name: 'commons-codec', version: '1.9'
 	earlib group: 'log4j', name: 'log4j', version: '1.2.17'
-	earlib group: 'javax', name: 'javaee-api', version: '6.0'
+	//earlib group: 'javax', name: 'javaee-api', version: '6.0'
 	earlib group: 'com.sun.xml.ws', name: 'jaxws-rt', version: '2.1.4'
 	deploy project(':ejb')
     deploy project(path:':web', configuration:'archives')

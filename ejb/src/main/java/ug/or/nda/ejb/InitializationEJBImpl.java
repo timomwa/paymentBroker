@@ -18,7 +18,7 @@ import ug.or.nda.entities.User;
 
 @Singleton
 @Startup
-public class InitializationEJB {
+public class InitializationEJBImpl implements InitializationEJBI {
 
 	public static PooledPBEStringEncryptor db_encryptor;
 	public static PooledStringDigester password_digestor;
