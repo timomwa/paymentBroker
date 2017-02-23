@@ -6,7 +6,7 @@ import java.util.Date;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name="paymentNotification", namespace="http://service.nda.or.ug")
-public class PaymentNotification implements Serializable {
+public class PaymentNotificationDTO implements Serializable {
 
 	/**
 	 * 
@@ -55,7 +55,11 @@ public class PaymentNotification implements Serializable {
 	public void setPaymentMode(String paymentMode) {
 		this.paymentMode = paymentMode;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "\n\nPaymentNotification [\n\t\tinvoiceNo=" + invoiceNo + ", \n\t\tamount=" + amount
+				+ ", \n\t\tcurrencyCode=" + currencyCode + ", \n\t\ttransactionRef=" + transactionRef
+				+ ", \n\t\ttransactionDate=" + transactionDate + ", \n\t\tpaymentMode=" + paymentMode + "\n]\n\n";
+	}
 
 }

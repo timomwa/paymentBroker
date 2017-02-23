@@ -5,19 +5,19 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name="paymentNotificationResponse", namespace="http://service.nda.or.ug")
-public class PaymentNotificationResponse implements Serializable {
+public class PaymentNotificationResponseDTO implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 5474983200726913213L;
-	private String statusCode;
+	private Integer statusCode;
 	private String statusMessage;
 	
-	public String getStatusCode() {
+	public Integer getStatusCode() {
 		return statusCode;
 	}
-	public void setStatusCode(String statusCode) {
+	public void setStatusCode(Integer statusCode) {
 		this.statusCode = statusCode;
 	}
 	public String getStatusMessage() {
@@ -25,6 +25,11 @@ public class PaymentNotificationResponse implements Serializable {
 	}
 	public void setStatusMessage(String statusMessage) {
 		this.statusMessage = statusMessage;
+	}
+	@Override
+	public String toString() {
+		return "\n\nPaymentNotificationResponse [\n\t\tstatusCode=" + statusCode + ", \n\t\tstatusMessage="
+				+ statusMessage + "\n]\n\n";
 	}
 	
 	

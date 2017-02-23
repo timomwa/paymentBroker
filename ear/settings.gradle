@@ -1,3 +1,0 @@
-gradle.ext.theName = 'paymentbroker-ear'
-gradle.ext.theGroup = 'paymentbroker'
-gradle.ext.theVersion = 1.0

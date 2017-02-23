@@ -7,11 +7,8 @@ import java.util.Date;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name="invoice", namespace="http://service.nda.or.ug")
-public class Invoice implements Serializable {
+public class InvoiceDTO implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -6044267411024241400L;
 	private String invoiceNo;
 	private String description;
@@ -62,6 +59,12 @@ public class Invoice implements Serializable {
 	}
 	public void setReference1(String reference1) {
 		this.reference1 = reference1;
+	}
+	@Override
+	public String toString() {
+		return "\n\nInvoice [\n\t\tinvoiceNo=" + invoiceNo + ", \n\t\tdescription=" + description + ", \n\t\tamount="
+				+ amount + ", \n\t\tcurrencyCode=" + currencyCode + ", \n\t\tcustomerName=" + customerName
+				+ ", \n\t\tdueDate=" + dueDate + ", \n\t\treference1=" + reference1 + "\n]\n\n";
 	}
 	
 	

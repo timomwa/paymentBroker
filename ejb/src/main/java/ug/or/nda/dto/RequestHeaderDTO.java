@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name="requestHeader", namespace="http://service.nda.or.ug")
-public class RequestHeader implements Serializable {
+public class RequestHeaderDTO implements Serializable {
 
 	/**
 	 * 
@@ -40,6 +40,11 @@ public class RequestHeader implements Serializable {
 	}
 	public void setSystemToken(String systemToken) {
 		this.systemToken = systemToken;
+	}
+	@Override
+	public String toString() {
+		return "\n\nRequestHeader [\n\t\tusername=" + username + ", \n\t\tpassword=********, \n\t\tsystemID="
+				+ systemID + ", \n\t\tsystemToken=" + systemToken + "\n]\n\n";
 	}
 	
 	
