@@ -18,3 +18,4 @@ ejb/.gradle/
 web/.gradle/
 **/.gradle/**
 **/build/**
+/.gradle/
