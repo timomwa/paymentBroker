@@ -23,7 +23,7 @@ public class PaymentNotificationEJBImpl implements PaymentNotificationEJBI {
 	@Inject
 	private PaymentNotificationDAOI paymentNotificationDAO;
 	
-	@Inject
+	@EJB
 	private PaymentNotificatinConverterI paymentNotificationConverter;
 	
 	@EJB

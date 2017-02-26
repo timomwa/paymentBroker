@@ -22,7 +22,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.jboss.ejb3/jboss-ejb3-ext-api
 	compile group: 'org.jboss.ejb3', name: 'jboss-ejb3-ext-api', version: '2.1.0'
 	compile group: 'org.quartz-scheduler', name: 'quartz-jobs', version: '2.2.1'
-	compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.3'
+	compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.1'
 	compile group: 'commons-codec', name: 'commons-codec', version: '1.9'
 	compile group: 'javax', name: 'javaee-api', version: '6.0'
 	compile group: 'log4j', name: 'log4j', version: '1.2.17'
