@@ -1,8 +1,8 @@
 apply plugin: 'war'
 apply plugin: 'maven'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 group = gradle.theGroup
 version = gradle.theVersion
@@ -16,5 +16,5 @@ repositories {
 }
 dependencies {
 	providedCompile 'paymentbroker:paymentbroker-ejb:1.0'
-	providedCompile group: 'javax', name: 'javaee-api', version: '6.0'
+	providedCompile group: 'javax', name: 'javaee-api', version: '7.0'
 }

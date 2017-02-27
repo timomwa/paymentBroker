@@ -12,10 +12,10 @@ import org.quartz.JobExecutionException;
 //import org.jboss.ejb3.annotation.ResourceAdapter;
 //import org.jboss.webbeans.ejb.InternalEjbDescriptor;
 
-@MessageDriven
-(activationConfig =
-{@ActivationConfigProperty(propertyName = "cronTrigger", propertyValue = "*/5 * * * * ?")})
-@ResourceAdapter("quartz-ra.rar") 
+//@MessageDriven
+//(activationConfig =
+//{@ActivationConfigProperty(propertyName = "cronTrigger", propertyValue = "*/5 * * * * ?")})
+//@ResourceAdapter("quartz-ra.rar") 
 public class PaymentForwardJob  implements Job {
 	
 	private Logger logger = Logger.getLogger(getClass());
@@ -23,7 +23,7 @@ public class PaymentForwardJob  implements Job {
 	@Override
 	public void execute(JobExecutionContext arg0) throws JobExecutionException {
 		
-		logger.info("\n\n**** 30 sec ? ******\n\n");
+		System.out.println("\n\n**** 30 sec ? ******\n\n");
 		
 	}
 

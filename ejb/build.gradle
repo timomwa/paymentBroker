@@ -1,8 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 group = gradle.theGroup
 version = gradle.theVersion
 jar {
@@ -20,11 +20,12 @@ repositories {
 
 dependencies {
 	// https://mvnrepository.com/artifact/org.jboss.ejb3/jboss-ejb3-ext-api
+	compile group: 'org.apache.axis', name: 'axis', version: '1.4'
 	compile group: 'org.jboss.ejb3', name: 'jboss-ejb3-ext-api', version: '2.1.0'
 	compile group: 'org.quartz-scheduler', name: 'quartz-jobs', version: '2.2.1'
 	compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.1'
 	compile group: 'commons-codec', name: 'commons-codec', version: '1.9'
-	compile group: 'javax', name: 'javaee-api', version: '6.0'
+	compile group: 'javax', name: 'javaee-api', version: '7.0'
 	compile group: 'log4j', name: 'log4j', version: '1.2.17'
 	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.0.0.Final'
 	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.0.0.Final'

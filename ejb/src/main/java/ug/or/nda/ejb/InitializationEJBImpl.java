@@ -18,7 +18,7 @@ import ug.or.nda.entities.User;
 
 @Singleton
 @Startup
-public class InitializationEJBImpl implements InitializationEJBI {
+public class InitializationEJBImpl{// implements InitializationEJBI {
 
 	public static PooledPBEStringEncryptor db_encryptor;
 	public static PooledStringDigester password_digestor;
@@ -88,5 +88,6 @@ public class InitializationEJBImpl implements InitializationEJBI {
 			logger.info("\n\t  *** successfully initialized pooled digestor  ***\n");
 		}
 	}
+	
 	
 }
